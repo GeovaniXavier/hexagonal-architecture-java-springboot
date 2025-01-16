@@ -20,6 +20,5 @@ public class ReceiveValidatedCpfConsumer {
     public void receive(CustomerMessage customerMessage) {
         var customer = customerMessageMapper.toCustomer(customerMessage);
         updateCustomerInputPort.update(customer, customerMessage.getZipCode());
-
     }
 }
